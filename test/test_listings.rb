@@ -180,9 +180,9 @@ class TestZooplaListings < Test::Unit::TestCase
   end
   
   def test_listing_id
-    listing_parameter_test(:listing_id, 7, {:listing_id => [7]})
-    listing_parameter_test(:listing_id, 11, {:listing_id => [7, 11]})
-    listing_parameter_test(:listing_id, 13, {:listing_id => [7, 11, 13]})
+    listing_parameter_test(:listing_id, 7, {:listing_id => 7})
+    listing_parameter_test(:listing_id, 11, {:listing_id => 11})
+    listing_parameter_test(:listing_id, 13, {:listing_id => 13})
   end
   
   def test_forming_the_request_by_chaining

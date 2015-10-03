@@ -124,8 +124,7 @@ class Zoopla
     # @return [Sales, Rentals]
     def listing_id(listing_id)
       ensure_valid_parameter('listing id', listing_id, lambda {|k| k.is_a? Fixnum and k >= 0})
-      @request[:listing_id] ||= []
-      @request[:listing_id] << listing_id
+      @request[:listing_id] = listing_id
       self        
     end
     
